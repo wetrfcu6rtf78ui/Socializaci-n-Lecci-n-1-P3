@@ -1,0 +1,180 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700";
+@import "https://fonts.googleapis.com/css?family=Dancing+Script:400,700";
+
+/* Estilos para títulos en light background */
+.reveal .has-light-background,
+.reveal .has-light-background h1,
+.reveal .has-light-background h2,
+.reveal .has-light-background h3,
+.reveal .has-light-background h4,
+.reveal .has-light-background h5,
+.reveal .has-light-background h6 {
+  color: #000; /* Color negro */
+}
+
+/* Establecer variables de color para títulos */
+:root {
+  --r-background-color: #ecf0f1; /* Color de fondo claro */
+  --r-main-font: 'Times New Roman', serif; /* Fuente principal */
+  --r-main-font-size: 24px;
+  --r-main-color: #000; /* Color de texto principal */
+  --r-heading-font: 'Times New Roman', serif; /* Fuente para títulos */
+  --r-heading-line-height: 1.2;
+  --r-heading1-size: 2em;
+  --r-heading2-size: 1.5em;
+  --r-heading3-size: 1.2em;
+  --r-heading4-size: 1em;
+  --r-heading5-size: 0.8em;
+  --r-heading6-size: 0.6em;
+  --r-heading1-color: #e74c3c; /* Color rojo para h1 */
+  --r-heading2-color: #3498db; /* Color azul para h2 */
+  --r-heading3-color: #27ae60; /* Color verde para h3 */
+  --r-heading4-color: #f1c40f; /* Color amarillo para h4 */
+  --r-heading5-color: #8e44ad; /* Color púrpura para h5 */
+  --r-heading6-color: #e67e22; /* Color naranja para h6 */
+  --r-link-color: #000; /* Color de enlace */
+  --r-link-color-hover: #2ecc71; /* Color de enlace al pasar el ratón */
+  --r-selection-background-color: #3498db; /* Color de fondo de selección de texto */
+  --r-selection-color: #fff; /* Color de texto seleccionado */
+}
+
+/* Establecer fondo de la ventana de presentación */
+.reveal-viewport {
+  background: #ecf0f1;
+  background-color: var(--r-background-color);
+}
+
+/* Estilos generales de la presentación */
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+/* Estilos para cada nivel de título */
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+  color: var(--r-heading1-color); /* Aplicar color para h1 */
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+  color: var(--r-heading2-color); /* Aplicar color para h2 */
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+  color: var(--r-heading3-color); /* Aplicar color para h3 */
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+  color: var(--r-heading4-color); /* Aplicar color para h4 */
+}
+
+.reveal h5 {
+  font-size: var(--r-heading5-size);
+  color: var(--r-heading5-color); /* Aplicar color para h5 */
+}
+
+.reveal h6 {
+  font-size: var(--r-heading6-size);
+  color: var(--r-heading6-color); /* Aplicar color para h6 */
+}
+
+/* Otros estilos para la presentación */
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+.reveal .controls {
+  color: var(--r-link-color) !important;
+}
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}
+
+.has-dark-background canvas[data-chart] {
+  background-color: white;
+}
+
+.has-light-background canvas[data-chart] {
+  background-color: unset;
+}
+
+canvas[data-chart] {
+  padding: 0.5em;
+}
+
+.reveal .hljs {
+  min-height: 50%;
+}
+
+/* Estilos para títulos dentro de un grid */
+.reveal .slides section > div h1,
+.reveal .slides section > div h2,
+.reveal .slides section > div h3,
+.reveal .slides section > div h4,
+.reveal .slides section > div h5,
+.reveal .slides section > div h6 {
+  color: inherit; /* Heredar el color del texto principal */
+  font-family: inherit; /* Heredar la fuente principal */
+}
+
+/* Estilos para títulos dentro de un grid con background claro */
+.reveal .slides section > div.has-light-background h1,
+.reveal .slides section > div.has-light-background h2,
+.reveal .slides section > div.has-light-background h3,
+.reveal .slides section > div.has-light-background h4,
+.reveal .slides section > div.has-light-background h5,
+.reveal .slides section > div.has-light-background h6 {
+  color: inherit; /* Heredar el color del texto principal */
+}
