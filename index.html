@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="https://i.pinimg.com/564x/1e/ea/2d/1eea2de52ae61b24fd9f230bf7771640.jpg" alt="Imagen" style="position: absolute; left: 0%; top: undefined%; height: 100%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="" style="position: absolute; left: 40%; top: 20%; height: 50%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+# Socialización
+## Lección 1
+### Angélica Montoya Gallego
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Isaac Newton IA.jpg" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 828px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Isaac Newton IA.jpg" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 828px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+## Punto 1
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Isaac Newton IA.jpg" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 828px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+## Punto 1
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 15%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Dos niños están jugando en un sube y baja. El niño 1 tiene un peso de 392 N  y el niño 2 tiene una masa de 30 kg.
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 25%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+El niño 1 está ubicado a una distancia de 150 Cm (1.5m) del eje de rotación del “Sube y Baja”. ¿Cuál debe ser la distancia 2, para que los niños queden en una posición completamente horizontal, es decir, en equilibrio rotacional?
+</div>
+
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Imagen Punto 1 Socialización Lección 1 P3.png" alt="" style="position: absolute; left: 30%; top: 37%; height: 50%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Solución <!-- elemnet drag="98 10" drop="center"-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 25%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Para solucionar el problema debemos de seguir los siguientes pasos:
+</div>
+
+<div class="" style="position: absolute; left: 19%; top: undefined%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+1. Graficar las fuerzas del problema en un **Diagrama de Cuerpo Libre**
+2. Sumar las fuerzas del Diagrama de Cuerpo Libre según `$\sum \tau=0$` y reemplazar `$\tau$` por `$\tau = F_{Fuerza}*r_{Distancia-Paralela-a-la-Fuerza}$` 
+	1. Despejar la variable que no conocemos `$d_{2}$`
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 13%; height: 10%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+1. Graficar las fuerzas del problema en un **Diagrama de Cuerpo Libre**
+</div>
+
+<div class="" style="position: absolute; left: 4%; top: 24%; height: 60%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+<img src="https://i.imgur.com/BPgtiKn.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 13%; height: 20%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+2. Sumar las fuerzas del Diagrama de Cuerpo Libre según `$\sum \tau=0$` y reemplazar `$\tau$` por `$\tau = F_{Fuerza}*r_{Distancia-Paralela-a-la-Fuerza}$` 
+</div>
+
+<div class="" style="position: absolute; left: 54%; top: 23%; height: 60%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+<img src="https://i.imgur.com/TWG0JkR.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 23%; height: 70%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end" align="bottom">
+
+<img src="https://i.imgur.com/TWG0JkR.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+## POR LO TANTO LA DISTANCIA QUE DEBE HABER ENTRE EL NIÑO 2 Y EL EJE DE ROTACIÓN PARA ENCONTAR EL EQUILIBRIO ROTACIONAL ES DE 2m<!-- .element: style="position: absolute; left: 50%; top: undefined%; height: 50%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Leonardo_Kino_XL_universo_ultra_tecnologico_tonos_azules_morad_1.png" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 1320px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Leonardo_Kino_XL_universo_ultra_tecnologico_tonos_azules_morad_1.png" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 1320px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+## Punto 2
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Leonardo_Kino_XL_universo_ultra_tecnologico_tonos_azules_morad_1.png" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 1320px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+## Punto 2
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+2. ¿Por qué es importante tener en cuenta el centro de masa en los siguientes contextos:
+	1. Cuerpo humano, un motociclista acróbata, un clavadista, un gimnasta, atleta de salto alto o largo, etc.
+	2. En una carrera de motos cuando se acerca a una curva.
+	3. Al llevar una mochila de camping, durante una caminata de varias horas.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Solución <!-- elemnet drag="98 10" drop="center"-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 12%; height: 85%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+Es esencial considerar el centro de masa en diversas situaciones, ya que afecta el equilibrio y la estabilidad de objetos o personas. Por ejemplo, en el caso del cuerpo humano y actividades acrobáticas como motociclismo, clavados, gimnasia y saltos, el centro de masa define la estabilidad del cuerpo o del objeto al realizar una acrobacia, un clavado o cambiar la dirección de la moto en una curva.
+
+En el caso de llevar una mochila de camping en una caminata larga, el centro de masa y su estabilidad pueden influir en trayectorias con obstáculos, como la subida de una montaña. Incluso si la trayectoria no tiene obstáculos o cambios de dirección, sigue siendo importante porque el centro de masa es lo que nos mantiene erguidos o de pie. 
+</div>
+
+
+<div class="" style="position: absolute; left: 50%; top: -20%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<split even wrap="2" >
+<img src="https://i.pinimg.com/564x/e9/6c/ce/e96cce894cd0cd895f7735a4b09a1edb.jpg" alt="|100x100" style="width: 100px; height: 100px; object-fit: fill">
+
+
+<img src="https://i.pinimg.com/564x/21/b0/c5/21b0c5a8558b353a7443ab2928d40219.jpg" alt="|100x100" style="width: 100px; height: 100px; object-fit: fill">
+
+</split>
+</div>
+
+
+<div class="" style="position: absolute; left: 50%; top: 10%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<split even wrap="2" >
+<img src="https://i.pinimg.com/564x/f6/28/54/f62854eb718d746ac2def5cd9796aa05.jpg" alt="|100x100" style="width: 100px; height: 100px; object-fit: fill">
+
+
+<img src="https://img.freepik.com/foto-gratis/alto-angulo-nadador-masculino-piscina-agua_23-2148687635.jpg?w=900&t=st=1707470326~exp=1707470926~hmac=ec86cc1ee0dff16a151417dd2c9517f2cdca3c04562cf06bcfdfe81835a87f95" alt="|100x100" style="width: 100px; height: 100px; object-fit: fill">
+
+</split>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_torre_de_pisa_estilo_disney_fondo_universo_azul_morado_2.png" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_torre_de_pisa_estilo_disney_fondo_universo_azul_morado_2.png" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+## Punto 3
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_torre_de_pisa_estilo_disney_fondo_universo_azul_morado_2.png" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+## Punto 3
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+3. Teniendo en cuenta todo lo expuesto sobre las condiciones de equilibro, explicar por qué la torre inclinada de Pisa (Italia) se ha mantenido en pie y el puente Chirajara (que conectaría Bogotá con Villavicencio) se derrumbó.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Solución <!-- elemnet drag="98 10" drop="center"-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 10%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+3. Teniendo en cuenta todo lo expuesto sobre las condiciones de equilibro, explicar por qué la torre inclinada de Pisa (Italia) se ha mantenido en pie y el puente Chirajara (que conectaría Bogotá con Villavicencio) se derrumbó.
+</div>
+
+<div class="" style="position: absolute; left: 10%; top: 25%; height: 70%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+La Torre de Pisa se ha mantenido de pie gracias a cómo se distribuye el peso en sus capas. Con una altura de unos 57 metros y un peso aproximado de 15 toneladas (15000 kg), con una inclinación de 4 grados, la capa base, al estar más cerca del suelo, soporta más peso que las superiores. Esta distribución del peso es vital para contrarrestar la inclinación característica de la torre y prevenir su colapso. Cada capa, de abajo hacia arriba, disminuye su tamaño, siendo la base la más pesada y la que sostiene toda la estructura. Gracias a esta distribución equitativa de peso y a la reducción gradual del tamaño de las capas, la torre se mantiene en equilibrio, inclinándose a 4 grados.
+</div>
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_torre_de_pisa_estilo_disney_0.png" alt="" style="position: absolute; left: 60%; top: 25%; height: 60%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 10%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+3. Teniendo en cuenta todo lo expuesto sobre las condiciones de equilibro, explicar por qué la torre inclinada de Pisa (Italia) se ha mantenido en pie y el puente Chirajara (que conectaría Bogotá con Villavicencio) se derrumbó.
+</div>
+
+<div class="" style="position: absolute; left: 12%; top: 28%; height: 50%; width: 75%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+**Un error de diseño habría provocado el colapso de la estructura.** "Después de analizar los resultados con un modelo estructural simplificado de la Torre, se confirma la insuficiencia de la estructura ante las cargas estáticas propias del avance de construcción", señala el informe preliminar. **El error se habría presentado en una viga horizontal a donde van a dar los cables de alta tensión que ayudan a soportar el peso del mole.**
+</div>
+
+<div class="" style="position: absolute; left: 12%; top: 52%; height: 10%; width: 75%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+https://www.portafolio.co/economia/infraestructura/causas-de-la-caida-del-puente-de-chirajara-513797
+</div>
+
+<div class="" style="position: absolute; left: 12%; top: 59%; height: 30%; width: 75%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+En el texto previo se explica que el colapso del puente de Chirajara se debió a la incorrecta distribución de los cables (los cuales sostienen y estabilizan la estructura) y de la viga a la que están conectados. De acuerdo con esto, se puede concluir que, además de los errores en el diseño, la mala ubicación de los cables, responsables de sostener el peso y proporcionar estabilidad, provocó una falta de equilibrio estático en el puente.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_carro_deportivo_en_montaa_persona_acostada_en_el_carro_2.png" alt="" style="position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_carro_deportivo_en_montaa_persona_acostada_en_el_carro_2.png" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+## Punto 4
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="006 - 🔗 REFERENCIAS GENERALES/Default_carro_deportivo_en_montaa_persona_acostada_en_el_carro_2.png" alt="" style="opacity: 0.5; position: absolute; left: 0%; top: -5%; height: 100%; width: 1090px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+## Punto 4
+</div>
+
+<div class="stretch-column" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="stretch">
+
+4. Con base en lo aprendido sobre el centro de masa explique ¿Por qué una minivan tiene más probabilidades de volcarse que un Corvette u otros autos deportivos? Para dar respuesta a esta a pregunta Ingresa a la plataforma Elión 3 , foro periodo 3 lección 1 socializar, responde la pregunta y comenta de forma respetuosa la participación de uno de tus compañeros.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Solución <!-- elemnet drag="98 10" drop="center"-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+En este caso considero que la minivan tiene mas probabilidad de volcarse que un auto deportivo, porque el centro de masa de la minivan se encuentra más alto (Más Lejos del piso) que el de un auto deportivo, pero esto realmente no explica el porque, solo es una hipótesis, por lo cual yo me lo imagino de la siguiente manera:
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 5%; height: 95%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://i.imgur.com/DwyYXWQ.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+Al analizar ambas torres, podemos observar que la torre compuesta por minivanes es más alta que la formada por los autos deportivos. Esto se debe a la altura de cada minivan y su centro de masa, que son más altos, lo que perjudica la estabilidad de la torre. Por otro lado, en el caso de los autos deportivos, su menor altura y centro de masa ofrecen una ventaja en términos de estabilidad.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+## Punto 5
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#1F4278" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+## Punto 5
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 14%; height: 20%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+5. ¿Explica en cuál de los siguientes casos el torque producido por el peso mantiene al vehículo en equilibrio?
+</div>
+
+<img src="https://i.imgur.com/eHko8aI.png" alt="" style="position: absolute; left: 20%; top: 25%; height: 50%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Solución <!-- elemnet drag="98 10" drop="center"-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-auto-animate="true" data-background-color="#A46714" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: maroon; position: absolute; left: 1%; top: 1%; height: 10%; width: 98%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Solución 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+En la situación a), si el centro de gravedad del vehículo está dentro de los soportes, se mantiene estable. Pero en las situaciones b) y c), tanto el automóvil como el camión se caerán porque sus centros de gravedad están fuera de los soportes, lo que los desequilibra y los hace volcar.
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" data-background-image="https://i.pinimg.com/564x/4d/43/40/4d4340388de322f19fc9d55812ac8438.jpg" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 400px; width: 827.9999999999999px; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: #A46714; position: absolute; left: 5%; top: 5%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+### Espero Atentamente la nota de esta actividad, si hay algún error en la solución por favor ofrecer una retroalimentación .
+</div>
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":"828","height":400,"margin":0,"controls":true,"progress":true,"slideNumber":true,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
