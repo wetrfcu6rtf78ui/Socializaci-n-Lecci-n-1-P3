@@ -1,0 +1,142 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700";
+@import "https://fonts.googleapis.com/css?family=Dancing+Script:400,700";
+
+.reveal .has-light-background,
+.reveal .has-light-background h1,
+.reveal .has-light-background h2,
+.reveal .has-light-background h3,
+.reveal .has-light-background h4,
+.reveal .has-light-background h5,
+.reveal .has-light-background h6 {
+  color: #000; /* Set color to black */
+}
+
+:root {
+  --r-background-color: #ecf0f1; /* Light background color */
+  --r-main-font: 'Roboto', sans-serif;
+  --r-main-font-size: 24px;
+  --r-main-color: #000; /* Main text color set to black */
+  --r-heading-font: 'Dancing Script', cursive;
+  --r-heading-color: #000; /* Heading color set to black */
+  --r-heading-line-height: 1.2;
+  --r-heading1-size: 2em;
+  --r-heading2-size: 1.5em;
+  --r-heading3-size: 1.2em;
+  --r-heading4-size: 1em;
+  --r-heading5-size: 0.8em;
+  --r-heading6-size: 0.6em;
+  --r-link-color: #000; /* Link color set to black */
+  --r-link-color-hover: #2ecc71; /* Hover color for links */
+  --r-selection-background-color: #3498db; /* Selected text background color */
+  --r-selection-color: #fff; /* Selected text color */
+}
+
+.reveal-viewport {
+  background: #ecf0f1;
+  background-color: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h5 {
+  font-size: var(--r-heading5-size);
+}
+
+.reveal h6 {
+  font-size: var(--r-heading6-size);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+.reveal .controls {
+  color: var(--r-link-color) !important;
+}
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}
+
+.has-dark-background canvas[data-chart] {
+  background-color: white;
+}
+
+.has-light-background canvas[data-chart] {
+  background-color: unset;
+}
+
+canvas[data-chart] {
+  padding: 0.5em;
+}
+
+.reveal .hljs {
+  min-height: 50%;
+}
